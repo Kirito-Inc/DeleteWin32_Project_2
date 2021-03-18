@@ -35,5 +35,12 @@ namespace DeleteWin32___Project_2
         {
             Close();
         }
+
+        private void NameTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) {
+                playButton.PerformClick();
+            }
+        }
     }
 }
