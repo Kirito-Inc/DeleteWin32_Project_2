@@ -251,22 +251,7 @@ namespace DeleteWin32___Project_2
 
         #endregion
 
-        
-        private System.Windows.Forms.Panel contolPanel;       
-        private System.Windows.Forms.Panel gamingField;
-        private System.Windows.Forms.PictureBox gameObject;
-        private System.Windows.Forms.GroupBox difGroupBox;
-        private System.Windows.Forms.RadioButton hardLevel;
-        private System.Windows.Forms.RadioButton mediumLevel;
-        private System.Windows.Forms.RadioButton eazyLevel;
-        private System.Windows.Forms.Button startButton;
-        private System.Windows.Forms.Button exitButton;
-        private System.Windows.Forms.Label scoreTitleLable;
-        private System.Windows.Forms.Label scoreLabel;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox infoGroupBox;
-        private System.Windows.Forms.Label timeLabel;
-        private System.Windows.Forms.Label timeTitleLable;
+  
     }
 }
 
