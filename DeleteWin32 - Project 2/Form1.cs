@@ -45,11 +45,15 @@ public partial class Form1 : Form
             timerGlobal += reward;
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
 
+        }
 
+        private void label3_Click(object sender, EventArgs e)
+        {
 
-
-
+        }
     }
     
 }
