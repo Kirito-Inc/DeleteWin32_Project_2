@@ -28,7 +28,6 @@ namespace DeleteWin32___Project_2
         /// </summary>
         private void InitializeComponent()
         {
-
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameForm));
             this.contolPanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
