@@ -1,4 +1,3 @@
-﻿
 namespace DeleteWin32___Project_2
 {
     partial class GameForm
@@ -29,6 +28,7 @@ namespace DeleteWin32___Project_2
         /// </summary>
         private void InitializeComponent()
         {
+
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameForm));
             this.contolPanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -245,28 +245,22 @@ namespace DeleteWin32___Project_2
             this.difGroupBox.PerformLayout();
             this.gamingField.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gameObject)).EndInit();
+
+            this.SuspendLayout();
+            // 
+            // Form1
+            // 
+            this.BackColor = System.Drawing.SystemColors.ControlText;
+            this.ClientSize = new System.Drawing.Size(942, 552);
+            this.Name = "Form1";
+
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        
-        private System.Windows.Forms.Panel contolPanel;       
-        private System.Windows.Forms.Panel gamingField;
-        private System.Windows.Forms.PictureBox gameObject;
-        private System.Windows.Forms.GroupBox difGroupBox;
-        private System.Windows.Forms.RadioButton hardLevel;
-        private System.Windows.Forms.RadioButton mediumLevel;
-        private System.Windows.Forms.RadioButton eazyLevel;
-        private System.Windows.Forms.Button startButton;
-        private System.Windows.Forms.Button exitButton;
-        private System.Windows.Forms.Label scoreTitleLable;
-        private System.Windows.Forms.Label scoreLabel;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox infoGroupBox;
-        private System.Windows.Forms.Label timeLabel;
-        private System.Windows.Forms.Label timeTitleLable;
+  
     }
 }
 
