@@ -1,7 +1,7 @@
 ﻿
 namespace DeleteWin32___Project_2
 {
-    partial class Form1
+    partial class GameForm
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -42,12 +42,7 @@ namespace DeleteWin32___Project_2
 
         #endregion
 
-        private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Timer timer2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Timer timer3;
+  
     }
 }
 

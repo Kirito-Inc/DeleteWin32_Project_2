@@ -11,11 +11,11 @@ using System.Windows.Forms;
 namespace DeleteWin32___Project_2
 {
     
-public partial class Form1 : Form
+public partial class GameForm : Form
     {
         static int timerGlobal = 5;
         Difficulty currentDiff;
-        public Form1()
+        public GameForm(string name)
         {
             InitializeComponent();           
         }
