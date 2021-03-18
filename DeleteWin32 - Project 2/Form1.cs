@@ -30,7 +30,7 @@ public partial class Form1 : Form
         private void OnTimedEvent(object sender, EventArgs e)
         {
             timerGlobal--;
-            label2.Text = timerGlobal.ToString();
+          //  label2.Text = timerGlobal.ToString();
             if(timerGlobal == 0)
             {               
                 ((Timer)sender).Stop();
@@ -45,22 +45,11 @@ public partial class Form1 : Form
             timerGlobal += reward;
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            SetTimer();
 
-        }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
 
-        }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            timerGlobal += 5;
-            label2.Text = timerGlobal.ToString();
-        }
+
     }
     
 }
