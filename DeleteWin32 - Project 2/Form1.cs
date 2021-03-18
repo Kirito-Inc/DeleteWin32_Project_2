@@ -10,80 +10,57 @@ using System.Windows.Forms;
 
 namespace DeleteWin32___Project_2
 {
-    public partial class Form1 : Form
+    
+public partial class Form1 : Form
     {
-        int x, y, score=0, timer = 10, count = 0;
+        static int timerGlobal = 5;
+        Difficulty currentDiff;
         public Form1()
         {
-            InitializeComponent();
-            label6.Text = "Game Over"+ Environment.NewLine+"Your score:";
-            label1.Text = "Score: " + score;
+            InitializeComponent();           
         }
-
-        private void button2_Click(object sender, EventArgs e) //stop button
+        private void SetTimer()
         {
-            Game_over();
+            //timerGlobal = currentDiff.StartTime;
+            Timer aTimer = new Timer();
+            aTimer.Interval = 1000;
+            aTimer.Tick += new EventHandler(OnTimedEvent);
+            aTimer.Enabled = true;
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e) //picture button
+        private void OnTimedEvent(object sender, EventArgs e)
         {
-            RandomLocation(); //moves randomly with each click
-            score++;
-            count++;
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void button1_Click(object sender, EventArgs e) //start(restart) button - starts a timer, duck becomes visible
-        {
-            timer1.Tick += new EventHandler(timer1_Tick_1);
-            pictureBox1.Visible = true;
-            pictureBox1.Enabled = true;
-            label6.Visible = false;
-            timer1.Start();
-            label5.Text = "Time remaining: " + timer.ToString();
-        }
-
-        private void timer1_Tick_1(object sender, EventArgs e)
-        {
-            timer-=1;
-            if(timer==0)
-            {
-                Game_over();
+            timerGlobal--;
+            label2.Text = timerGlobal.ToString();
+            if(timerGlobal == 0)
+            {               
+                ((Timer)sender).Stop();
+                ((Timer)sender).Dispose();
+                MessageBox.Show("Game over");
             }
-            label5.Text = "Time remaining: " + timer.ToString();
-        }
-        private void Game_over()
-        {
-            label5.Text = "Time remaining: 0";
-            button1.Text = "restart";
-            timer1.Stop();
-            label6.Visible = true;
-            pictureBox1.Visible = false;
-            pictureBox1.Enabled = false;
         }
 
-        private void RandomLocation()
-        {
-            Random random = new Random();
-            x = random.Next(60, 690);
-            y = random.Next(60, 440);
-            pictureBox1.Location = new Point(x, y);
-        }
-        private void level()
-        {
-            if(count == 10)
-            {
 
-            }
+        static void EvaluateTimer(int reward)
+        {
+            timerGlobal += reward;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            SetTimer();
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            timerGlobal += 5;
+            label2.Text = timerGlobal.ToString();
         }
     }
+    
 }
