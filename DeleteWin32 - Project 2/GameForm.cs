@@ -13,14 +13,16 @@ namespace DeleteWin32___Project_2
 
     public partial class GameForm : Form
     {
+        static int score;
         Random rand = new Random();
-        static int timerGlobal = 5;
+        static int curPicSize;
+        static int timerGlobal;
         static readonly Difficulty Easy = new Difficulty(30, 15, 200, 200, 400, 400, 40, 60);
         static readonly Difficulty Medium = new Difficulty(22, 12, 300, 300, 700, 400, 30, 60);
         static readonly Difficulty Hard = new Difficulty(15, 7, 400, 400, 1400, 861, 20, 60);
         Bitmap bitmapImg = new Bitmap("duck.png");
-        static Bitmap[] pics = new Bitmap[3] ;
-        
+        static Bitmap[] pics = new Bitmap[3];
+
         Difficulty currentDiff;
         public GameForm(string name)
         {
@@ -30,9 +32,6 @@ namespace DeleteWin32___Project_2
             pics[0] = new Bitmap("duck.png");
             pics[1] = new Bitmap("duck2.png");
             pics[2] = new Bitmap("duck_3.png");
-            gameObject.BackColor = Color.Black;
-
-
         }
         private void SetTimer()
         {
@@ -55,15 +54,8 @@ namespace DeleteWin32___Project_2
                 MessageBox.Show("Game over");
             }
         }
-
-
-        static void EvaluateTimer(int reward)
-        {
-            timerGlobal += reward;
-        }
         private void EasyRadioButtonOnCheck(object sender, EventArgs e)
         {
-
             if (((RadioButton)sender).Checked) { currentDiff = Easy; }
             SetValues();
         }
@@ -72,29 +64,23 @@ namespace DeleteWin32___Project_2
 
             if (((RadioButton)sender).Checked) { currentDiff = Medium; }
             SetValues();
-
         }
 
         private void HardRadioButtonOnCheck(object sender, EventArgs e)
         {
-
             if (((RadioButton)sender).Checked) { currentDiff = Hard; }
             SetValues();
-
         }
 
 
         private void SetValues()
         {
+            score = 0;
             timerLabel.Text = (timerGlobal = currentDiff.StartTime).ToString();
             gameField.Size = new Size(currentDiff.MinSizeX, currentDiff.MinSizeY);
             gameObject.Size = new Size(currentDiff.MaxPicSize, currentDiff.MaxPicSize);
             gameField.Location = new Point(200, 0);
-            bitmapImg = new Bitmap("duck.png");
-           
-
-
-
+            curPicSize = currentDiff.MaxPicSize;
         }
 
         private void startButton_Click(object sender, EventArgs e)
@@ -103,34 +89,57 @@ namespace DeleteWin32___Project_2
             SetTimer();
             diffGroupBox.Enabled = false;
             startButton.Enabled = false;
-            // gameField.Size = new Size( gameField.Size.Width+10,gameField.Size.Height+10);
+            gameObject.Location = RandPoint();
+            gameObject.Image = cResize(curPicSize);
+            gameObject.Visible = true;
+
+            // gameField.Size = new Size(gameField.Size.Width+10,gameField.Size.Height+10);
         }
 
         private void exitButton_Click(object sender, EventArgs e)
         {
             Close();
         }
+
         private Point RandPoint()
         {
-            return new Point(rand.Next(gameField.Width - gameObject.Width ), rand.Next(gameField.Height - gameObject.Height ));
+            return new Point(rand.Next(gameField.Width - gameObject.Width), rand.Next(gameField.Height - gameObject.Height));
         }
-        private Bitmap Resize(int width, int height) {
-            Bitmap result = new Bitmap(width, height);
+
+        private Bitmap cResize(int curPicSize)
+        {
+            Bitmap result = new Bitmap(curPicSize, curPicSize);
             Bitmap bmp = pics[rand.Next(3)];
             using (Graphics g = Graphics.FromImage(result))
             {
-                g.DrawImage(bmp, 0, 0, width, height);
+                g.DrawImage(bmp, 0, 0, curPicSize, curPicSize);
             }
-
             return result;
-
         }
-
         private void gameObject_Click(object sender, EventArgs e)
         {
-            gameObject.BackColor = Color.Transparent;
-            gameObject.Image=Resize(currentDiff.MaxPicSize, currentDiff.MaxPicSize);
+            gameObject.Image = cResize(curPicSize);
             gameObject.Location = RandPoint();
+            score++;
+            if (score % 10 == 0)
+            {
+                timerGlobal += currentDiff.Reward;
+                if (gameField.Width < currentDiff.MaxSizeX)
+                {
+                    gameField.Width += 10;
+                }
+                if (gameField.Height < currentDiff.MaxSizeY)
+                {
+                    gameField.Height += 10;
+                }
+                if (gameObject.Height > currentDiff.MinPicSize)
+                {
+                    gameObject.Width -= 5;
+                    gameObject.Height -= 5;
+                    curPicSize -= 5;
+                }
+            }
+            scoreLabel.Text = score.ToString();
         }
     }
 

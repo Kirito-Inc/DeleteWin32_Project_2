@@ -28,7 +28,6 @@ namespace DeleteWin32___Project_2
         /// </summary>
         private void InitializeComponent()
         {
-
             this.controlPanel = new System.Windows.Forms.Panel();
             this.infoGroupBox = new System.Windows.Forms.GroupBox();
             this.timerLabel = new System.Windows.Forms.Label();
@@ -49,7 +48,6 @@ namespace DeleteWin32___Project_2
             this.diffGroupBox.SuspendLayout();
             this.gameField.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gameObject)).BeginInit();
-
             this.SuspendLayout();
             // 
             // controlPanel
@@ -222,12 +220,12 @@ namespace DeleteWin32___Project_2
             this.gameObject.Size = new System.Drawing.Size(100, 50);
             this.gameObject.TabIndex = 0;
             this.gameObject.TabStop = false;
+            this.gameObject.Visible = false;
             this.gameObject.Click += new System.EventHandler(this.gameObject_Click);
             // 
             // GameForm
             // 
             this.BackColor = System.Drawing.SystemColors.ControlText;
-
             this.ClientSize = new System.Drawing.Size(1584, 861);
             this.Controls.Add(this.gameField);
             this.Controls.Add(this.controlPanel);
@@ -242,7 +240,6 @@ namespace DeleteWin32___Project_2
             this.diffGroupBox.PerformLayout();
             this.gameField.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gameObject)).EndInit();
-
             this.ResumeLayout(false);
 
         }
