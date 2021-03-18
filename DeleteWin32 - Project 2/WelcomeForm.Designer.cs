@@ -75,6 +75,7 @@ namespace DeleteWin32___Project_2
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(167, 20);
             this.nameTextBox.TabIndex = 1;
+            this.nameTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.NameTextBox_KeyDown);
             // 
             // playButton
             // 

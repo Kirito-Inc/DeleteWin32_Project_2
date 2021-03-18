@@ -29,238 +29,242 @@ namespace DeleteWin32___Project_2
         private void InitializeComponent()
         {
 
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameForm));
-            this.contolPanel = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.controlPanel = new System.Windows.Forms.Panel();
             this.infoGroupBox = new System.Windows.Forms.GroupBox();
-            this.timeLabel = new System.Windows.Forms.Label();
-            this.timeTitleLable = new System.Windows.Forms.Label();
-            this.exitButton = new System.Windows.Forms.Button();
-            this.scoreTitleLable = new System.Windows.Forms.Label();
+            this.timerLabel = new System.Windows.Forms.Label();
+            this.timerTitleLabel = new System.Windows.Forms.Label();
             this.scoreLabel = new System.Windows.Forms.Label();
-            this.difGroupBox = new System.Windows.Forms.GroupBox();
-            this.hardLevel = new System.Windows.Forms.RadioButton();
-            this.mediumLevel = new System.Windows.Forms.RadioButton();
-            this.eazyLevel = new System.Windows.Forms.RadioButton();
+            this.scoreTitleLabel = new System.Windows.Forms.Label();
+            this.exitButton = new System.Windows.Forms.Button();
+            this.diffGroupBox = new System.Windows.Forms.GroupBox();
+            this.hardRadioButton = new System.Windows.Forms.RadioButton();
+            this.mediumRadioButton = new System.Windows.Forms.RadioButton();
+            this.easyRadioButton = new System.Windows.Forms.RadioButton();
             this.startButton = new System.Windows.Forms.Button();
-            this.gamingField = new System.Windows.Forms.Panel();
+            this.welcomeLabel = new System.Windows.Forms.Label();
+            this.gameField = new System.Windows.Forms.Panel();
             this.gameObject = new System.Windows.Forms.PictureBox();
-            this.contolPanel.SuspendLayout();
+            this.controlPanel.SuspendLayout();
             this.infoGroupBox.SuspendLayout();
-            this.difGroupBox.SuspendLayout();
-            this.gamingField.SuspendLayout();
+            this.diffGroupBox.SuspendLayout();
+            this.gameField.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gameObject)).BeginInit();
+
             this.SuspendLayout();
             // 
-            // contolPanel
+            // controlPanel
             // 
-            this.contolPanel.BackColor = System.Drawing.Color.DarkBlue;
-            this.contolPanel.Controls.Add(this.label1);
-            this.contolPanel.Controls.Add(this.infoGroupBox);
-            this.contolPanel.Controls.Add(this.difGroupBox);
-            this.contolPanel.Controls.Add(this.startButton);
-            this.contolPanel.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.contolPanel.Location = new System.Drawing.Point(0, 0);
-            this.contolPanel.Name = "contolPanel";
-            this.contolPanel.Size = new System.Drawing.Size(240, 861);
-            this.contolPanel.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(33, 34);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "label1";
+            this.controlPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.controlPanel.Controls.Add(this.infoGroupBox);
+            this.controlPanel.Controls.Add(this.diffGroupBox);
+            this.controlPanel.Controls.Add(this.startButton);
+            this.controlPanel.Controls.Add(this.welcomeLabel);
+            this.controlPanel.ForeColor = System.Drawing.Color.Black;
+            this.controlPanel.Location = new System.Drawing.Point(0, 0);
+            this.controlPanel.Name = "controlPanel";
+            this.controlPanel.Size = new System.Drawing.Size(200, 861);
+            this.controlPanel.TabIndex = 0;
             // 
             // infoGroupBox
             // 
-            this.infoGroupBox.Controls.Add(this.timeLabel);
-            this.infoGroupBox.Controls.Add(this.timeTitleLable);
-            this.infoGroupBox.Controls.Add(this.exitButton);
-            this.infoGroupBox.Controls.Add(this.scoreTitleLable);
+            this.infoGroupBox.Controls.Add(this.timerLabel);
+            this.infoGroupBox.Controls.Add(this.timerTitleLabel);
             this.infoGroupBox.Controls.Add(this.scoreLabel);
-            this.infoGroupBox.Location = new System.Drawing.Point(12, 363);
+            this.infoGroupBox.Controls.Add(this.scoreTitleLabel);
+            this.infoGroupBox.Controls.Add(this.exitButton);
+            this.infoGroupBox.Location = new System.Drawing.Point(21, 453);
             this.infoGroupBox.Name = "infoGroupBox";
-            this.infoGroupBox.Size = new System.Drawing.Size(156, 210);
-            this.infoGroupBox.TabIndex = 12;
+            this.infoGroupBox.Size = new System.Drawing.Size(156, 396);
+            this.infoGroupBox.TabIndex = 11;
             this.infoGroupBox.TabStop = false;
             // 
-            // timeLabel
+            // timerLabel
             // 
-            this.timeLabel.AutoSize = true;
-            this.timeLabel.BackColor = System.Drawing.Color.Black;
-            this.timeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.timeLabel.ForeColor = System.Drawing.Color.DarkOrange;
-            this.timeLabel.Location = new System.Drawing.Point(50, 116);
-            this.timeLabel.Name = "timeLabel";
-            this.timeLabel.Size = new System.Drawing.Size(16, 18);
-            this.timeLabel.TabIndex = 11;
-            this.timeLabel.Text = "0";
+            this.timerLabel.AutoSize = true;
+            this.timerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.timerLabel.Location = new System.Drawing.Point(68, 245);
+            this.timerLabel.Name = "timerLabel";
+            this.timerLabel.Size = new System.Drawing.Size(32, 33);
+            this.timerLabel.TabIndex = 9;
+            this.timerLabel.Text = "0";
+            this.timerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // timeTitleLable
+            // timerTitleLabel
             // 
-            this.timeTitleLable.AutoSize = true;
-            this.timeTitleLable.BackColor = System.Drawing.Color.Black;
-            this.timeTitleLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.timeTitleLable.ForeColor = System.Drawing.Color.DarkOrange;
-            this.timeTitleLable.Location = new System.Drawing.Point(5, 80);
-            this.timeTitleLable.Name = "timeTitleLable";
-            this.timeTitleLable.Size = new System.Drawing.Size(47, 20);
-            this.timeTitleLable.TabIndex = 10;
-            this.timeTitleLable.Text = "Time:";
-            // 
-            // exitButton
-            // 
-            this.exitButton.BackColor = System.Drawing.Color.DarkOrange;
-            this.exitButton.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.exitButton.ForeColor = System.Drawing.Color.Navy;
-            this.exitButton.Location = new System.Drawing.Point(0, 160);
-            this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(95, 29);
-            this.exitButton.TabIndex = 9;
-            this.exitButton.Text = "Exit";
-            this.exitButton.UseVisualStyleBackColor = false;
-            // 
-            // scoreTitleLable
-            // 
-            this.scoreTitleLable.AutoSize = true;
-            this.scoreTitleLable.BackColor = System.Drawing.Color.Black;
-            this.scoreTitleLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.scoreTitleLable.ForeColor = System.Drawing.Color.DarkOrange;
-            this.scoreTitleLable.Location = new System.Drawing.Point(5, 8);
-            this.scoreTitleLable.Name = "scoreTitleLable";
-            this.scoreTitleLable.Size = new System.Drawing.Size(55, 20);
-            this.scoreTitleLable.TabIndex = 8;
-            this.scoreTitleLable.Text = "Score:";
-            this.scoreTitleLable.Click += new System.EventHandler(this.label3_Click);
+            this.timerTitleLabel.AutoSize = true;
+            this.timerTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.timerTitleLabel.Location = new System.Drawing.Point(47, 184);
+            this.timerTitleLabel.Name = "timerTitleLabel";
+            this.timerTitleLabel.Size = new System.Drawing.Size(63, 25);
+            this.timerTitleLabel.TabIndex = 8;
+            this.timerTitleLabel.Text = "Time";
             // 
             // scoreLabel
             // 
             this.scoreLabel.AutoSize = true;
-            this.scoreLabel.BackColor = System.Drawing.Color.Black;
-            this.scoreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.scoreLabel.ForeColor = System.Drawing.Color.DarkOrange;
-            this.scoreLabel.Location = new System.Drawing.Point(50, 45);
+            this.scoreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.scoreLabel.Location = new System.Drawing.Point(66, 114);
             this.scoreLabel.Name = "scoreLabel";
-            this.scoreLabel.Size = new System.Drawing.Size(16, 18);
+            this.scoreLabel.Size = new System.Drawing.Size(32, 33);
             this.scoreLabel.TabIndex = 7;
             this.scoreLabel.Text = "0";
+            this.scoreLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // difGroupBox
+            // scoreTitleLabel
             // 
-            this.difGroupBox.BackColor = System.Drawing.Color.DarkOrange;
-            this.difGroupBox.Controls.Add(this.hardLevel);
-            this.difGroupBox.Controls.Add(this.mediumLevel);
-            this.difGroupBox.Controls.Add(this.eazyLevel);
-            this.difGroupBox.Font = new System.Drawing.Font("Bahnschrift Light SemiCondensed", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(204)));
-            this.difGroupBox.Location = new System.Drawing.Point(12, 153);
-            this.difGroupBox.Name = "difGroupBox";
-            this.difGroupBox.Size = new System.Drawing.Size(118, 150);
-            this.difGroupBox.TabIndex = 5;
-            this.difGroupBox.TabStop = false;
-            this.difGroupBox.Text = "Difficulty";
+            this.scoreTitleLabel.AutoSize = true;
+            this.scoreTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.scoreTitleLabel.Location = new System.Drawing.Point(37, 42);
+            this.scoreTitleLabel.Name = "scoreTitleLabel";
+            this.scoreTitleLabel.Size = new System.Drawing.Size(82, 29);
+            this.scoreTitleLabel.TabIndex = 6;
+            this.scoreTitleLabel.Text = "Score";
             // 
-            // hardLevel
+            // exitButton
             // 
-            this.hardLevel.AutoSize = true;
-            this.hardLevel.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.hardLevel.Location = new System.Drawing.Point(0, 102);
-            this.hardLevel.Name = "hardLevel";
-            this.hardLevel.Size = new System.Drawing.Size(56, 21);
-            this.hardLevel.TabIndex = 4;
-            this.hardLevel.TabStop = true;
-            this.hardLevel.Text = "Hard";
-            this.hardLevel.UseVisualStyleBackColor = true;
+            this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.exitButton.Location = new System.Drawing.Point(6, 322);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(144, 68);
+            this.exitButton.TabIndex = 2;
+            this.exitButton.Text = "Exit";
+            this.exitButton.UseVisualStyleBackColor = true;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
-            // mediumLevel
+            // diffGroupBox
             // 
-            this.mediumLevel.AutoSize = true;
-            this.mediumLevel.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.mediumLevel.Location = new System.Drawing.Point(0, 64);
-            this.mediumLevel.Name = "mediumLevel";
-            this.mediumLevel.Size = new System.Drawing.Size(74, 21);
-            this.mediumLevel.TabIndex = 3;
-            this.mediumLevel.TabStop = true;
-            this.mediumLevel.Text = "Medium";
-            this.mediumLevel.UseVisualStyleBackColor = true;
+            this.diffGroupBox.Controls.Add(this.hardRadioButton);
+            this.diffGroupBox.Controls.Add(this.mediumRadioButton);
+            this.diffGroupBox.Controls.Add(this.easyRadioButton);
+            this.diffGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.diffGroupBox.Location = new System.Drawing.Point(21, 178);
+            this.diffGroupBox.Name = "diffGroupBox";
+            this.diffGroupBox.Size = new System.Drawing.Size(156, 269);
+            this.diffGroupBox.TabIndex = 10;
+            this.diffGroupBox.TabStop = false;
+            this.diffGroupBox.Text = "Difficulty";
             // 
-            // eazyLevel
+            // hardRadioButton
             // 
-            this.eazyLevel.AutoSize = true;
-            this.eazyLevel.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.eazyLevel.Location = new System.Drawing.Point(0, 26);
-            this.eazyLevel.Name = "eazyLevel";
-            this.eazyLevel.Size = new System.Drawing.Size(55, 21);
-            this.eazyLevel.TabIndex = 2;
-            this.eazyLevel.TabStop = true;
-            this.eazyLevel.Text = "Eazy";
-            this.eazyLevel.UseVisualStyleBackColor = true;
+            this.hardRadioButton.AutoSize = true;
+            this.hardRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.hardRadioButton.Location = new System.Drawing.Point(18, 193);
+            this.hardRadioButton.Name = "hardRadioButton";
+            this.hardRadioButton.Size = new System.Drawing.Size(80, 29);
+            this.hardRadioButton.TabIndex = 5;
+            this.hardRadioButton.TabStop = true;
+            this.hardRadioButton.Text = "Hard";
+            this.hardRadioButton.UseVisualStyleBackColor = true;
+            this.hardRadioButton.CheckedChanged += new System.EventHandler(this.HardRadioButtonOnCheck);
+            // 
+            // mediumRadioButton
+            // 
+            this.mediumRadioButton.AutoSize = true;
+            this.mediumRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.mediumRadioButton.Location = new System.Drawing.Point(18, 123);
+            this.mediumRadioButton.Name = "mediumRadioButton";
+            this.mediumRadioButton.Size = new System.Drawing.Size(112, 29);
+            this.mediumRadioButton.TabIndex = 4;
+            this.mediumRadioButton.TabStop = true;
+            this.mediumRadioButton.Text = "Medium";
+            this.mediumRadioButton.UseVisualStyleBackColor = true;
+            this.mediumRadioButton.CheckedChanged += new System.EventHandler(this.MediumRadioButtonOnCheck);
+            // 
+            // easyRadioButton
+            // 
+            this.easyRadioButton.AutoSize = true;
+            this.easyRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.easyRadioButton.Location = new System.Drawing.Point(18, 56);
+            this.easyRadioButton.Name = "easyRadioButton";
+            this.easyRadioButton.Size = new System.Drawing.Size(82, 29);
+            this.easyRadioButton.TabIndex = 3;
+            this.easyRadioButton.TabStop = true;
+            this.easyRadioButton.Text = "Easy";
+            this.easyRadioButton.UseVisualStyleBackColor = true;
+            this.easyRadioButton.CheckedChanged += new System.EventHandler(this.EasyRadioButtonOnCheck);
             // 
             // startButton
             // 
-            this.startButton.BackColor = System.Drawing.Color.Orange;
-            this.startButton.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.startButton.ForeColor = System.Drawing.Color.DarkBlue;
-            this.startButton.Location = new System.Drawing.Point(21, 72);
+            this.startButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.startButton.Location = new System.Drawing.Point(35, 110);
             this.startButton.Name = "startButton";
-            this.startButton.Size = new System.Drawing.Size(95, 35);
-            this.startButton.TabIndex = 0;
+            this.startButton.Size = new System.Drawing.Size(116, 44);
+            this.startButton.TabIndex = 1;
             this.startButton.Text = "Start";
-            this.startButton.UseVisualStyleBackColor = false;
+            this.startButton.UseVisualStyleBackColor = true;
+            this.startButton.Click += new System.EventHandler(this.startButton_Click);
             // 
-            // gamingField
+            // welcomeLabel
             // 
-            this.gamingField.BackColor = System.Drawing.Color.DarkGoldenrod;
-            this.gamingField.Controls.Add(this.gameObject);
-            this.gamingField.Location = new System.Drawing.Point(235, 0);
-            this.gamingField.Name = "gamingField";
-            this.gamingField.Size = new System.Drawing.Size(1009, 601);
-            this.gamingField.TabIndex = 1;
+            this.welcomeLabel.AutoSize = true;
+            this.welcomeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.welcomeLabel.Location = new System.Drawing.Point(17, 9);
+            this.welcomeLabel.MaximumSize = new System.Drawing.Size(160, 0);
+            this.welcomeLabel.Name = "welcomeLabel";
+            this.welcomeLabel.Size = new System.Drawing.Size(160, 80);
+            this.welcomeLabel.TabIndex = 0;
+            this.welcomeLabel.Text = "Welcomeasdasdaasdasdasdasdasdasdasdasdsdasdasdasdasd";
+            this.welcomeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // gameField
+            // 
+            this.gameField.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.gameField.Controls.Add(this.gameObject);
+            this.gameField.Location = new System.Drawing.Point(604, 258);
+            this.gameField.Name = "gameField";
+            this.gameField.Size = new System.Drawing.Size(341, 257);
+            this.gameField.TabIndex = 1;
             // 
             // gameObject
             // 
-            this.gameObject.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.gameObject.Image = ((System.Drawing.Image)(resources.GetObject("gameObject.Image")));
-            this.gameObject.InitialImage = null;
-            this.gameObject.Location = new System.Drawing.Point(364, 118);
+            this.gameObject.Location = new System.Drawing.Point(85, 92);
             this.gameObject.Name = "gameObject";
-            this.gameObject.Size = new System.Drawing.Size(339, 234);
+            this.gameObject.Size = new System.Drawing.Size(100, 50);
             this.gameObject.TabIndex = 0;
             this.gameObject.TabStop = false;
+            this.gameObject.Click += new System.EventHandler(this.gameObject_Click);
             // 
             // GameForm
             // 
             this.BackColor = System.Drawing.SystemColors.ControlText;
-            this.ClientSize = new System.Drawing.Size(1582, 853);
-            this.Controls.Add(this.gamingField);
-            this.Controls.Add(this.contolPanel);
+
+            this.ClientSize = new System.Drawing.Size(1584, 861);
+            this.Controls.Add(this.gameField);
+            this.Controls.Add(this.controlPanel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "GameForm";
-            this.contolPanel.ResumeLayout(false);
-            this.contolPanel.PerformLayout();
+            this.controlPanel.ResumeLayout(false);
+            this.controlPanel.PerformLayout();
             this.infoGroupBox.ResumeLayout(false);
             this.infoGroupBox.PerformLayout();
-            this.difGroupBox.ResumeLayout(false);
-            this.difGroupBox.PerformLayout();
-            this.gamingField.ResumeLayout(false);
+            this.diffGroupBox.ResumeLayout(false);
+            this.diffGroupBox.PerformLayout();
+            this.gameField.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gameObject)).EndInit();
-
-            this.SuspendLayout();
-            // 
-            // Form1
-            // 
-            this.BackColor = System.Drawing.SystemColors.ControlText;
-            this.ClientSize = new System.Drawing.Size(942, 552);
-            this.Name = "Form1";
 
             this.ResumeLayout(false);
 
         }
 
+
         #endregion
 
-  
+        private System.Windows.Forms.Panel controlPanel;
+        private System.Windows.Forms.GroupBox infoGroupBox;
+        private System.Windows.Forms.Label timerLabel;
+        private System.Windows.Forms.Label timerTitleLabel;
+        private System.Windows.Forms.Label scoreLabel;
+        private System.Windows.Forms.Label scoreTitleLabel;
+        private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.GroupBox diffGroupBox;
+        private System.Windows.Forms.RadioButton hardRadioButton;
+        private System.Windows.Forms.RadioButton mediumRadioButton;
+        private System.Windows.Forms.RadioButton easyRadioButton;
+        private System.Windows.Forms.Button startButton;
+        private System.Windows.Forms.Label welcomeLabel;
+        private System.Windows.Forms.Panel gameField;
+        private System.Windows.Forms.PictureBox gameObject;
     }
 }
 
