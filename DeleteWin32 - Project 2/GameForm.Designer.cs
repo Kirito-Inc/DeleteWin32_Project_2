@@ -1,4 +1,3 @@
-﻿
 namespace DeleteWin32___Project_2
 {
     partial class GameForm
@@ -245,6 +244,15 @@ namespace DeleteWin32___Project_2
             this.difGroupBox.PerformLayout();
             this.gamingField.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gameObject)).EndInit();
+
+            this.SuspendLayout();
+            // 
+            // Form1
+            // 
+            this.BackColor = System.Drawing.SystemColors.ControlText;
+            this.ClientSize = new System.Drawing.Size(942, 552);
+            this.Name = "Form1";
+
             this.ResumeLayout(false);
 
         }
