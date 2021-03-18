@@ -23,7 +23,8 @@ namespace DeleteWin32___Project_2
             {
                 errorLabel.Visible = true;
             }
-            else {
+            else
+            {
                 GameForm game = new GameForm(nameTextBox.Text);
                 this.Hide();
                 game.ShowDialog();
@@ -38,7 +39,8 @@ namespace DeleteWin32___Project_2
 
         private void NameTextBox_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter) {
+            if (e.KeyCode == Keys.Enter)
+            {
                 playButton.PerformClick();
             }
         }
