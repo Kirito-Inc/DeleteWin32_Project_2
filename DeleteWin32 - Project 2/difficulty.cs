@@ -9,18 +9,23 @@ namespace DeleteWin32___Project_2
     class Difficulty
     {
         private int startTime;
-        public int StartTime { get { return startTime; } }
         private int reward;
-        public int Reward { get { return reward; } }
         private int minSizeX;
         private int minSizeY;
         private int maxSizeX;
         private int maxSizeY;
-        public int MinSizeX { get { return minSizeX; } }
-        public int MinSizeY { get { return minSizeY; } }
-        public int MaxSizeX { get { return maxSizeX; } }
-        public int MaxSizeY { get { return maxSizeY; } }
-        public Difficulty(int startTime, int reward, int minSizeX, int minSizeY, int maxSizeX, int maxSizeY)
+        private int minPicSize;
+        private int maxPicSize;
+        public int StartTime { get => startTime; }
+        public int Reward { get => reward; }
+        public int MinSizeX { get => minSizeX; }
+        public int MinSizeY { get => minSizeY; }
+        public int MaxSizeX { get => maxSizeX; }
+        public int MaxSizeY { get => maxSizeY; }
+        public int MinPicSize { get => minPicSize; }
+        public int MaxPicSize { get => maxPicSize; }
+
+        public Difficulty(int startTime, int reward, int minSizeX, int minSizeY, int maxSizeX, int maxSizeY,int minPicSize, int maxPicSize)
         {
             this.startTime = startTime;
             this.reward = reward;
@@ -28,6 +33,8 @@ namespace DeleteWin32___Project_2
             this.minSizeY = minSizeY;
             this.maxSizeX = maxSizeX;
             this.maxSizeY = maxSizeY;
+            this.minPicSize = minPicSize;
+            this.maxPicSize = maxPicSize;
         }
         public Difficulty() { }
 

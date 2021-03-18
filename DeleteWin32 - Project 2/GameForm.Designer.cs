@@ -1,7 +1,7 @@
 ﻿
 namespace DeleteWin32___Project_2
 {
-    partial class Form1
+    partial class GameForm
     {
         /// <summary>
         /// Обязательная переменная конструктора.
