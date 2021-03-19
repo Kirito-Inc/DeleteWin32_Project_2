@@ -35,6 +35,7 @@ namespace DeleteWin32___Project_2
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.playButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
+            this.TeamSign = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // titleLabel
@@ -97,11 +98,24 @@ namespace DeleteWin32___Project_2
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
+            // TeamSign
+            // 
+            this.TeamSign.AutoSize = true;
+            this.TeamSign.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TeamSign.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TeamSign.ForeColor = System.Drawing.Color.DimGray;
+            this.TeamSign.Location = new System.Drawing.Point(113, 219);
+            this.TeamSign.Name = "TeamSign";
+            this.TeamSign.Size = new System.Drawing.Size(85, 15);
+            this.TeamSign.TabIndex = 4;
+            this.TeamSign.Text = "by DeleteWin32";
+            // 
             // WelcomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(320, 243);
+            this.Controls.Add(this.TeamSign);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.playButton);
             this.Controls.Add(this.nameTextBox);
@@ -123,5 +137,6 @@ namespace DeleteWin32___Project_2
         private System.Windows.Forms.TextBox nameTextBox;
         private System.Windows.Forms.Button playButton;
         private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.Label TeamSign;
     }
 }
