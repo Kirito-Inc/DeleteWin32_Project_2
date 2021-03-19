@@ -80,7 +80,7 @@ namespace DeleteWin32___Project_2
             // 
             this.timerLabel.AutoSize = true;
             this.timerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.timerLabel.Location = new System.Drawing.Point(68, 245);
+            this.timerLabel.Location = new System.Drawing.Point(55, 220);
             this.timerLabel.Name = "timerLabel";
             this.timerLabel.Size = new System.Drawing.Size(32, 33);
             this.timerLabel.TabIndex = 9;
@@ -91,7 +91,7 @@ namespace DeleteWin32___Project_2
             // 
             this.timerTitleLabel.AutoSize = true;
             this.timerTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.timerTitleLabel.Location = new System.Drawing.Point(47, 184);
+            this.timerTitleLabel.Location = new System.Drawing.Point(46, 165);
             this.timerTitleLabel.Name = "timerTitleLabel";
             this.timerTitleLabel.Size = new System.Drawing.Size(63, 25);
             this.timerTitleLabel.TabIndex = 8;
@@ -101,7 +101,7 @@ namespace DeleteWin32___Project_2
             // 
             this.scoreLabel.AutoSize = true;
             this.scoreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.scoreLabel.Location = new System.Drawing.Point(66, 114);
+            this.scoreLabel.Location = new System.Drawing.Point(55, 92);
             this.scoreLabel.Name = "scoreLabel";
             this.scoreLabel.Size = new System.Drawing.Size(32, 33);
             this.scoreLabel.TabIndex = 7;

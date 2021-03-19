@@ -110,7 +110,6 @@ namespace DeleteWin32___Project_2
             this.Controls.Add(this.titleLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "WelcomeForm";
-            this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
 
